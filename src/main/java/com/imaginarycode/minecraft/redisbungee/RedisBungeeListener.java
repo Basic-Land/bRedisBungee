@@ -31,14 +31,30 @@ import java.util.*;
 @AllArgsConstructor
 public class RedisBungeeListener implements Listener {
     private static final BaseComponent[] ALREADY_LOGGED_IN =
-            new ComponentBuilder("You are already logged on to this server.").color(ChatColor.RED)
-                    .append("\n\nIt may help to try logging in again in a few minutes.\nIf this does not resolve your issue, please contact staff.")
-                    .color(ChatColor.GRAY)
+            new ComponentBuilder("").color(ChatColor.RED)
+                    .append("\n")
+                    .append("    §7§m-+----------§r §8§l»§r  §c§lBasicLand System§r  §8§l«§r §7§m----------+-\n")
+                    .append("\n")
+                    .append("    §eTve jmeno jiz hraje na serveru.!\n")
+                    .append("\n")
+                    .append("    §7Prosim vyckej dokud neprobehne synchronizace.\n"+
+                            "    §7Odhadovana doba, je par minut. Pripoj se prosim pozdeji.\n")
+                    .append("\n")
+                    .append("    §7§m-+--------------------------------------------+-\n")
+                    .append("\n")
                     .create();
     private static final BaseComponent[] ONLINE_MODE_RECONNECT =
-            new ComponentBuilder("Whoops! You need to reconnect.").color(ChatColor.RED)
-                    .append("\n\nWe found someone online using your username. They were kicked and you may reconnect.\nIf this does not work, please contact staff.")
-                    .color(ChatColor.GRAY)
+            new ComponentBuilder("").color(ChatColor.RED)
+                    .append("\n")
+                    .append("    §7§m-+----------§r §8§l»§r  §c§lBasicLand System§r  §8§l«§r §7§m----------+-\n")
+                    .append("\n")
+                    .append("    §eTve jmeno jiz hraje na serveru!\n")
+                    .append("\n")
+                    .append("    §7Prosim vyckej dokud neprobehne synchronizace.\n"+
+                            "    §7Odhadovana doba, je par minut. Pripoj se prosim pozdeji.\n")
+                    .append("\n")
+                    .append("    §7§m-+--------------------------------------------+-\n")
+                    .append("\n")
                     .create();
     private final RedisBungee plugin;
     private final List<InetAddress> exemptAddresses;
